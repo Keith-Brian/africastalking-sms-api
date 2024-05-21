@@ -16,13 +16,12 @@ const app = express();
 app.use(express.json());
 
 
-const apiKey = process.env.API_KEY;
-const userName = process.env.API_KEY;
+const API_KEY = process.env.API_KEY;
+const API_USERNAME = process.env.API_USERNAME;
 const port = process.env.PORT || 8080;
 
 
-
-const africastalking = AfricasTalking({username: userName.toString(), apiKey: apiKey.toString()});
+const africastalking = AfricasTalking({username: API_USERNAME, apiKey: API_KEY});
 
 
 // the root end-point
